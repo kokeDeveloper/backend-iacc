@@ -1,0 +1,19 @@
+config:
+  # This is a test server run by team Artillery
+  # It's designed to be highly scalable
+  target: http://asciiart.artillery.io:8080
+  phases:
+    - duration: 15
+      arrivalRate: 3
+      rampTo: 5
+      name: Fase de Preparacion
+    - duration: 30
+      arrivalRate: 10
+      rampTo: 5
+      name: Fase de Stress
+scenarios:
+  - flow:
+      - loop:
+        - get:
+            url: "/alumnos"
+        count: 100
