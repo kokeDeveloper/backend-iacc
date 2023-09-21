@@ -39,32 +39,32 @@ Este proyecto utiliza Artilley para realizar pruebas de estrés en la API. Para 
   A continuación se muestran algunos ejemplos de comandos curl para probar los diferentes endpoints de la API:
 
   # Obtener todos los alumnos 
-  curl -X GET http://localhost:3000/alumnos
+  curl -X GET http://localhost:3001/alumnos
   
   # Crear un nuevo usuario 
-  curl -X POST -H "Content-Type: application/json" -d '{"nombre": "string", "apellido": "string", "email": "string", "edad": "number", "direccion": "string", "carrera": "[{"id"}]}' http://localhost:3000/alumnos
+  curl -X POST -H "Content-Type: application/json" -d '{"nombre": "string", "apellido": "string", "email": "string", "edad": "number", "direccion": "string", "carrera": "[{"id"}]}' http://localhost:3001/alumnos
   
   # Actualizar un usuario existente 
-  curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "Nuevo nombre"}' http://localhost:3000/alumnos/:id
+  curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "Nuevo nombre"}' http://localhost:3001/alumnos/:id
   
   # Eliminar un usuario 
-  curl -X DELETE http://localhost:3000/alumnos/:id
+  curl -X DELETE http://localhost:3001/alumnos/:id
   
   # Obtener todos las carreras 
-  curl -X GET http://localhost:3000/carreras
+  curl -X GET http://localhost:3001/carreras
   
   # Crear un nueva carrera 
   curl -X POST -H "Content-Type: application/json" -d '{"nombre": "string", "codigo": "number", "año": "number", "semestre": "number", "sede": "string"
 
   # Actualizar una carrera existente 
-  curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "Nuevo nombre"}' http://localhost:3000/carreras/:id
+  curl -X PUT -H "Content-Type: application/json" -d '{"nombre": "Nuevo nombre"}' http://localhost:3001/carreras/:id
   
   # Eliminar una carrera
-  curl -X DELETE http://localhost:3000/carreras/:id
+  curl -X DELETE http://localhost:3001/carreras/:id
 
 
 ## Comando curl para inscribir a un alumno en un curso
-curl -X POST -H "Content-Type: application/json" -d '{"nombre": "", "apellido": "", "email": "", "edad": "", "direccion": "", "carrera": "[{"id"}]}' http://localhost:3000/alumnos
+curl -X POST -H "Content-Type: application/json" -d '{"nombre": "", "apellido": "", "email": "", "edad": "", "direccion": "", "carrera": "[{"id"}]}' http://localhost:3001/alumnos
 
 
 
